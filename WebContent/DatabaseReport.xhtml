@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<h2>JSF Reporting</h2>
+<hr/>
+
+<h:dataTable var="report" value="#{cr.list}" bgcolor="azure" border="1" rules="all" 
+cellspacing="1" cellpadding="3" width="75%">
+
+<f:facet name="header">Celebrity Information</f:facet>
+
+<h:column>
+<f:facet name="header">Number</f:facet>
+<h:outputLabel value="#{report.celebno}"></h:outputLabel>
+</h:column>
+
+<h:column>
+<f:facet name="header">Name</f:facet>
+<h:outputLabel value="#{report.celebnm}"></h:outputLabel>
+</h:column>
+
+<h:column>
+<f:facet name="header">Field</f:facet>
+<h:outputLabel value="#{report.field}"></h:outputLabel>
+</h:column>
+
+<h:column>
+<f:facet name="header">Country</f:facet>
+<h:outputLabel value="#{report.country}"></h:outputLabel>
+</h:column>
+
+</h:dataTable>
+
+
+
+</body>
+</html>
